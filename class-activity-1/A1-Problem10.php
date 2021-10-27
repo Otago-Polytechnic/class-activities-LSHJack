@@ -14,11 +14,11 @@
         else return false;
     }
 
-    echo "Is 11 A Prime Number?";
+    echo "Is 11 A Prime Number?\n";
     var_export(is_prime(11));
     echo nl2br("\n\n");
 
-    echo "Is 18 A Prime Number?";
+    echo "Is 18 A Prime Number?\n";
     var_export(is_prime(18));
     echo nl2br("\n\n");
 

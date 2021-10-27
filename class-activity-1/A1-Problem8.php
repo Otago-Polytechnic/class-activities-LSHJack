@@ -7,7 +7,8 @@
         $length=count($str)-1;
         for($i=0;$i<count($str);$i++)
         {
-            if($str[$i]<>$str[$length]) return false;
+            if($str[$i]<>$str[$length])
+            return false;
             $length--;
         }
         return true;
