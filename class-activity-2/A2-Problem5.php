@@ -1,5 +1,8 @@
 <?php
 
+//Class Activity 2 - Question 5
+//Jack Lam
+
     interface App
     {
         public function login($email);

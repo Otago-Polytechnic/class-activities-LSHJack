@@ -1,5 +1,12 @@
 <?php
 
+//Class Activity 2 - Question 3
+//Jack Lam
+//Expected Output:
+//Morena
+//Hola
+//Guten Morgen
+
     class Language
     {
         public function good_morning()
@@ -40,10 +47,5 @@
     $maori->good_morning();
     $spanish->good_morning();
     $german->good_morning();
-
-    //Expected Output:
-    //Morena
-    //Hola
-    //Guten Morgen
     
 ?>

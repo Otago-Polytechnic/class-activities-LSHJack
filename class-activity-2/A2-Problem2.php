@@ -1,5 +1,13 @@
 <?php
 
+//Class Activity 1 - Question 1
+//Jack Lam
+//Expected Output:
+//Malik Martin
+//Livia Martin
+//Alfredo Boyle Not Found
+//Livia Martin Found
+
     class Employee
     {
         protected $first_name;
@@ -116,9 +124,4 @@
     echo nl2br("\n--Show All--\n");
     $agile_coach->show_all();
 
-    //Expected Output:
-    //Malik Martin
-    //Livia Martin
-    //Alfredo Boyle Not Found
-    //Livia Martin Found
 ?>

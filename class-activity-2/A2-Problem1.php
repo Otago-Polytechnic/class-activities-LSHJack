@@ -1,5 +1,8 @@
 <?php
 
+//Class Activity 2 - Question 1
+//Jack Lam
+
     class Cat
     {
         private $name;

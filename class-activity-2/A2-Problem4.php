@@ -1,5 +1,8 @@
 <?php
 
+//Class Activity 2 - Question 4
+//Jack Lam
+
     class Stack
     {
         private $stack;
@@ -77,15 +80,10 @@
     //Peek test
     echo nl2br("\n --Peek Test--\n");
     $delete_item=$stack->pop();
-    echo nl2br("$delete_item is deleted.\n\n");
+    echo nl2br("$delete_item is last item.\n\n");
 
     //Show All
     $stack->show_all();
     echo "There are ". $stack->size() . nl2br(" item(s) in the stack.\n");
-
-    //Expected output:
-    //["Introductory App Dev Concepts", "Intermediate App Dev Concepts"]
-    //Intermediate App Dev Concepts is at the top of the stack
-    //There are 2 item(s) in the stack
 
 ?>
