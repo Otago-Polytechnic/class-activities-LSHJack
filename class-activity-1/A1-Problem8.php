@@ -1,5 +1,11 @@
 <?php
 
+//Class Activity 1 - Question 8
+//Jack Lam
+//Expected Output:
+//true
+//false
+
     function palindrome($string)
     {
         $str = str_split(strtolower(preg_replace('/[^a-zA-Z]/','',$string)));
@@ -21,9 +27,5 @@
     echo nl2br("Hello,World! is palindrome\n");
     if(palindrome("Hello,World!")) echo nl2br("true\n\n");
     else echo nl2br("false\n\n");
-
-    //Expected Output:
-    //true
-    //false
 
 ?>

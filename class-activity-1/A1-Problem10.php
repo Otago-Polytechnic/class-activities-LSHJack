@@ -1,5 +1,11 @@
 <?php
 
+//Class Activity 1 - Question 10
+//Jack Lam
+//Expected Output:
+//true
+//false
+
     function is_prime($number)
     {
         $count=0;
@@ -21,9 +27,5 @@
     echo "Is 18 A Prime Number?\n";
     var_export(is_prime(18));
     echo nl2br("\n\n");
-
-    //Expected Output:
-    //true
-    //false
 
 ?>

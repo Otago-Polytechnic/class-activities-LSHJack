@@ -1,5 +1,11 @@
 <?php
 
+//Class Activity 1 - Question 6
+//Jack Lam
+//Expected Output:
+//true
+//false
+
     function is_anagram($string_one, $string_two)
     {
         $str1_array=str_split($string_one);
@@ -17,9 +23,5 @@
 
     if(is_anagram("cat", "sat")) echo nl2br("cat & sat is anagram: true\n\n");
     else echo nl2br("cat & sat is anagram: false\n\n");
-
-    //Expected Output:
-    //true
-    //false
 
 ?>

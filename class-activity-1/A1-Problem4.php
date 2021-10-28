@@ -1,5 +1,17 @@
 <?php
 
+//Class Activity 1 - Question 4
+//Jack Lam
+//Expected Output:
+//1
+//Fizz
+//Buzz
+//7
+//Fizz
+//11
+//13
+//FizzBuzz
+
     function fizzBuzz($num)
     {
         $return_value="";
@@ -11,15 +23,5 @@
     }
 
     for ($i = 1; $i <= 15; $i += 2) echo fizzBuzz($i). nl2br("\n");
-
-    //Expected Output:
-    //1
-    //Fizz
-    //Buzz
-    //7
-    //Fizz
-    //11
-    //13
-    //FizzBuzz
 
 ?>

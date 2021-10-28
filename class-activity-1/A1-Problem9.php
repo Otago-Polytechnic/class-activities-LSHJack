@@ -1,5 +1,10 @@
 <?php
 
+//Class Activity 1 - Question 9
+//Jack Lam
+//Expected Output:
+//truck
+
     function is_five_letters($string_array)
     {
         $num=0;
@@ -17,8 +22,5 @@
     $result = is_five_letters(["car","bike","truck"]);
 
     foreach($result as $x) echo nl2br("$x\n");
-
-    //Expected Output:
-    //truck
 
 ?>
