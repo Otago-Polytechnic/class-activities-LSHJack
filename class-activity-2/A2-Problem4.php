@@ -20,7 +20,8 @@
 
         public function peek()
         {
-            //Unknown Function
+            $delete_item=array_splice($this->stack,count($this->stack)-1,1);
+            return $this->stack[count($this->stack)-1];
         }
 
         public function is_empty()
@@ -70,6 +71,11 @@
 
     //Pop test
     echo nl2br("\n --Pop Test   |   1 Item Is Deleted By LIFO--\n");
+    $delete_item=$stack->pop();
+    echo nl2br("$delete_item is deleted.\n");
+
+    //Peek test
+    echo nl2br("\n --Peek Test--\n");
     $delete_item=$stack->pop();
     echo nl2br("$delete_item is deleted.\n\n");
 
