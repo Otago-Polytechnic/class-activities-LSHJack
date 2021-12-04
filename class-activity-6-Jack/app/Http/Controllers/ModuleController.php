@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\lecturer;
+use App\Models\Module;
 
-class LecturerController extends Controller
+class ModuleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,9 @@ class LecturerController extends Controller
      */
     public function index()
     {
-        return lecturer::all();
+        return module::all();
     
-        // SQL equivalent: SELECT * FROM lecturer;
+        // SQL equivalent: SELECT * FROM module;
     }
 
     /**
@@ -27,11 +27,11 @@ class LecturerController extends Controller
      */
     public function store(Request $request)
     {
-        return lecturer::create($request->all());
+        return module::create($request->all());
     
         // SQL equivalent: 
-        // INSERT INTO lecturer
-        // VALUES ($request->firstname, $request->lastname, $request->email, $request->address, $request->salary, $request->qualification);
+        // INSERT INTO module
+        // VALUES ($request->name, $request->credit, $request->level);
     }
 
     /**
@@ -40,11 +40,11 @@ class LecturerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($mid)
     {
-        return lecturer::find($id);
+        return module::find($mid);
 
-        // SQL equivalent: SELECT * FROM lecturer WHERE id = $id;
+        // SQL equivalent: SELECT * FROM module WHERE id = $id;
     }
 
     /**
@@ -54,15 +54,15 @@ class LecturerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $mid)
     {
-        $lecturer = Lecturer::find($id);
-        $lecturer->update($request->all());
-        return $lecturer;
+        $module = module::find($mid);
+        $module->update($request->all());
+        return $module;
 
         // SQL equivalent:
-        // UPDATE lecturer
-        // SET firstname = $request->firstname, lastname = $request->lastname, email = $request->email, address = $request->address, salary = $request->salary, qualification = $request->qualification
+        // UPDATE module
+        // SET name = $request->name, credit = $request->credit, level = $request->level
         // WHERE id = $id;
     }
 
@@ -72,12 +72,12 @@ class LecturerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($mid)
     {
-        return Lecturer::destroy($id);
+        return module::destroy($mid);
     
         // SQL equivalent:
-        // DELETE FROM lecturer
+        // DELETE FROM module
         // WHERE id = $id;
     }
 }

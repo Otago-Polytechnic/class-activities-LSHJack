@@ -41,10 +41,12 @@ Route::group(['prefix' => 'module'], function () {
     Route::delete('/{id}', [ModuleController::class, 'destroy']);
 });
 
-Route::group(['prefix', 'prefix', 'prefix' => 'enrolment'], function () {
-    Route::get('/', '/', '/', [EnrolmentController::class, 'index']);
-    Route::get('/{stid}', '/{mid}', '/{lid}', [EnrolmentController::class, 'show']);
-    Route::post('/', '/', '/', [EnrolmentController::class, 'store']);
-    Route::put('/{stid}', '/{mid}', '/{lid}', [EnrolmentController::class, 'update']);
-    Route::delete('/{stid}', '/{mid}', '/{lid}', [EnrolmentController::class, 'destroy']);
+Route::group(['prefix' => 'enrolment'], function () {
+    Route::get('/', [EnrolmentController::class, 'index']);
+    Route::get('/{id}', [EnrolmentController::class, 'show']);
+    Route::get('/module/{id}', [EnrolmentController::class, 'showModule']);
+    Route::get('/{stid}/{mid}/{block}', [EnrolmentController::class, 'showOneModule']);
+    Route::post('/', [EnrolmentController::class, 'store']);
+    Route::put('/{stid}/{mid}/{block}', [EnrolmentController::class, 'update']);
+    Route::delete('/{id}', [EnrolmentController::class, 'destroy']);
 });

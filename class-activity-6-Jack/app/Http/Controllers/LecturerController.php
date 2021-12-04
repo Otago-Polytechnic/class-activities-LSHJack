@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\student;
+use App\Models\Lecturer;
 
-class StudentController extends Controller
+class LecturerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,9 @@ class StudentController extends Controller
      */
     public function index()
     {
-        return student::all();
+        return lecturer::all();
     
-        // SQL equivalent: SELECT * FROM student;
+        // SQL equivalent: SELECT * FROM lecturer;
     }
 
     /**
@@ -27,11 +27,11 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        return student::create($request->all());
+        return lecturer::create($request->all());
     
         // SQL equivalent: 
-        // INSERT INTO student
-        // VALUES ($request->firstname, $request->lastname, $request->email, $request->address);
+        // INSERT INTO lecturer
+        // VALUES ($request->firstname, $request->lastname, $request->email, $request->address, $request->salary, $request->qualification);
     }
 
     /**
@@ -40,11 +40,11 @@ class StudentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($lid)
     {
-        return student::find($id);
+        return lecturer::find($lid);
 
-        // SQL equivalent: SELECT * FROM student WHERE id = $id;
+        // SQL equivalent: SELECT * FROM lecturer WHERE id = $id;
     }
 
     /**
@@ -54,15 +54,15 @@ class StudentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $lid)
     {
-        $student = student::find($id);
-        $student->update($request->all());
-        return $student;
+        $lecturer = Lecturer::find($lid);
+        $lecturer->update($request->all());
+        return $lecturer;
 
         // SQL equivalent:
-        // UPDATE student
-        // SET firstname = $request->firstname, lastname = $request->lastname, email = $request->email, address = $request->address
+        // UPDATE lecturer
+        // SET firstname = $request->firstname, lastname = $request->lastname, email = $request->email, address = $request->address, salary = $request->salary, qualification = $request->qualification
         // WHERE id = $id;
     }
 
@@ -72,12 +72,12 @@ class StudentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($lid)
     {
-        return student::destroy($id);
+        return Lecturer::destroy($lid);
     
         // SQL equivalent:
-        // DELETE FROM student
+        // DELETE FROM lecturer
         // WHERE id = $id;
     }
 }

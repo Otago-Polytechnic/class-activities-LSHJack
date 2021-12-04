@@ -14,10 +14,14 @@ class CreateEnrolmentsTable extends Migration
     public function up()
     {
         Schema::create('enrolments', function (Blueprint $table) {
-            //$table->id();
+            $table->string('id');
             $table->string('stid');
             $table->string('mid');
             $table->string('lid');
+            $table->foreign('stid')->references('stid')->on('students')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('mid')->references('mid')->on('modules')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('lid')->references('lid')->on('lecturers')->onDelete('cascade')->onUpdate('cascade');
+            $table->primary(['stid', 'mid', 'block']);
             $table->string('block');
             $table->string('mark');
             $table->timestamps();

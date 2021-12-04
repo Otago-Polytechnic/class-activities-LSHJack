@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\module;
+use App\Models\Student;
 
-class ModuleController extends Controller
+class StudentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,9 @@ class ModuleController extends Controller
      */
     public function index()
     {
-        return module::all();
+        return student::all();
     
-        // SQL equivalent: SELECT * FROM module;
+        // SQL equivalent: SELECT * FROM student;
     }
 
     /**
@@ -27,11 +27,11 @@ class ModuleController extends Controller
      */
     public function store(Request $request)
     {
-        return module::create($request->all());
+        return student::create($request->all());
     
         // SQL equivalent: 
-        // INSERT INTO module
-        // VALUES ($request->name, $request->credit, $request->level);
+        // INSERT INTO student
+        // VALUES ($request->firstname, $request->lastname, $request->email, $request->address);
     }
 
     /**
@@ -40,11 +40,11 @@ class ModuleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($stid)
     {
-        return module::find($id);
+        return student::find($stid);
 
-        // SQL equivalent: SELECT * FROM module WHERE id = $id;
+        // SQL equivalent: SELECT * FROM student WHERE id = $id;
     }
 
     /**
@@ -54,15 +54,15 @@ class ModuleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $stid)
     {
-        $module = module::find($id);
-        $module->update($request->all());
-        return $module;
+        $student = student::find($stid);
+        $student->update($request->all());
+        return $student;
 
         // SQL equivalent:
-        // UPDATE module
-        // SET name = $request->name, credit = $request->credit, level = $request->level
+        // UPDATE student
+        // SET firstname = $request->firstname, lastname = $request->lastname, email = $request->email, address = $request->address
         // WHERE id = $id;
     }
 
@@ -72,12 +72,12 @@ class ModuleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($stid)
     {
-        return module::destroy($id);
+        return student::destroy($stid);
     
         // SQL equivalent:
-        // DELETE FROM module
+        // DELETE FROM student
         // WHERE id = $id;
     }
 }

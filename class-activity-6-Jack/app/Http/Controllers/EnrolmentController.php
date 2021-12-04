@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\enrolment;
-use App\Models\student;
-use App\Models\lecturer;
-use App\Models\module;
+use App\Models\Enrolment;
+use App\Models\Student;
+use App\Models\Lecturer;
+use App\Models\Module;
 
 class EnrolmentController extends Controller
 {
@@ -59,7 +59,7 @@ class EnrolmentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $enrolment = enrolment::find($stid);
+        $enrolment = enrolment::find($id);
         $enrolment->update($request->all());
         return $enrolment;
 
