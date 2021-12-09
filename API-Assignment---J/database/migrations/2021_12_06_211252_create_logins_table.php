@@ -19,6 +19,7 @@ class CreateLoginsTable extends Migration
             $table->string('email');
             $table->integer('phone');
             $table->string('address');
+            $table->int('accounttype');
         });
     }
 

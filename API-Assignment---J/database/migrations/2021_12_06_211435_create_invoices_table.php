@@ -18,7 +18,7 @@ class CreateInvoicesTable extends Migration
             $table->integer('menuid');
             $table->integer('unitprice');
             $table->integer('quantity');
-            $table->integer('price');
+            $table->integer('totalprice');
             $table->integer('transid');
             $table->timestamps();
         });

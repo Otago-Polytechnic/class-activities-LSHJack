@@ -20,6 +20,7 @@ class CreateTransactionsTable extends Migration
             $table->integer('phone');
             $table->string('address');
             $table->string('status');
+            $table->string('paymenttype');
             $table->timestamps();
         });
     }

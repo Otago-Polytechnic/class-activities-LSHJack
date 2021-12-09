@@ -9,5 +9,5 @@ class login extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'email', 'password', 'phone', 'address'];
+    protected $fillable = ['name', 'email', 'password', 'phone', 'address', 'accounttype'];
 }

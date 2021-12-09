@@ -9,5 +9,5 @@ class invoice extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['menuid', 'unitprice', 'quantity', 'price', 'transid'];
+    protected $fillable = ['menuid', 'unitprice', 'quantity', 'totalprice', 'transid'];
 }
